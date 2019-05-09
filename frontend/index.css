@@ -4,28 +4,3 @@
 body{
     background-color:#55aaaa;
 }
-
-div.title_card{
-    height:18px;
-  width:100%;
-  background:#000080;
-  color:#FFF;
-}
-
-p.title_login{
-    margin:2px 0 0 1px;
-    float:left;
-    font-family:Tahoma;
-    font-weight:bold;
-    font-size:11px;
-  }
-
-div.input_card_title{
-    border: 2px solid;
-    border-bottom-color: #c7c7c7;
-    border-right-color: #c7c7c7;
-    border-left-color: #808080;
-    border-top-color: #808080;
-    background-color: #fff;
-    padding: 10px;
-}
