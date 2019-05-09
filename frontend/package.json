@@ -1,20 +1,21 @@
 {
-  "name": "chisono-master",
+  "name": "chi-sono-frontend",
   "version": "1.0.0",
-  "description": "Gioco molto bello per esame dell'università",
-  "main": "index.js",
+  "description": "",
+  "private": true,
   "scripts": {
+    "dev": "npx webpack-dev-server",
+    "build": "cp index.html dist/ && npx webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andrea-css/chiSono.git"
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
   },
-  "keywords": [],
-  "author": "DreamTeam\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[CCSSDreamTeam",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/andrea-css/chiSono/issues"
-  },
-  "homepage": "https://github.com/andrea-css/chiSono#readme"
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
 }
