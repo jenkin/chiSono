@@ -13,6 +13,9 @@ body {
     -moz-osx-font-smoothing: auto,  inherit,  unset,  grayscale;
     font-smoothing: auto,  inherit,  unset, grayscale;
 }
+#img2 {
+    align-self: center;
+}
 
 #dialogue_box {
     width: 490px;
@@ -75,6 +78,7 @@ input[type=text] {
     width: 216px;
     font-family: Helvetica;
     line-height: 14px;
+    
 }
 
 #content span {
@@ -97,7 +101,7 @@ input[type=text] {
 #buttonerators {
     float: left;
     width: 80px;
-    padding-top: 11px;
+    padding-top: 36px;
 }
 
 input[type=button] {
@@ -126,6 +130,7 @@ width: 68px;
     line-height: 12px;
 background: #c0c0c0;
 margin-left: 1px;
+margin-top: 10px;
 }
 
 .pixels {
