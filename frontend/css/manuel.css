@@ -31,6 +31,11 @@ body {
     font-weight: bold;
 }
 
+.scroll{
+    height: 100px;
+    overflow-y: scroll;
+}
+
 #titlebar span {
     float: right;
     font-weight: bold;
