@@ -106,7 +106,7 @@ input[type=button] {
 background: #c0c0c0;
 }
 input[type=submit] {
-width: 68px;
+width: 30px;
     height: 16px;
     border-bottom: 1px solid #808080;
     border-right: 1px solid #808080;
@@ -117,8 +117,6 @@ width: 68px;
     font-family: Helvetica;
     line-height: 12px;
 background: #c0c0c0;
-margin-left: 1px;
-margin-top: 10px;
 }
 
 .pixels {
