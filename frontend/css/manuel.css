@@ -7,7 +7,7 @@ body {
     padding: 15px;
     background: teal;
     font-family: Helvetica;
-    font-size: 11px;
+    font-size: 14px;
     line-height: 12px;
     -webkit-font-smoothing: none,  antialiased,  subpixel-antialiased;
     -moz-osx-font-smoothing: auto,  inherit,  unset,  grayscale;
@@ -18,7 +18,13 @@ body {
     overflow: hidden;
     height:100px;
 }
+.padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
 #img2 {
+    height:100px;
+    width:170;
     align-self: center;
 }
 
@@ -40,7 +46,24 @@ body {
     height: 100px;
     overflow-y: scroll;
 }
+.nomePersonaggio{
+    position: relative;
+    left: 50%;
+}
 
+.centro{
+    text-align: center;
+}
+.colore_fondo{
+    background-color:#C0C0C0;
+    height: 83px;
+}
+.spazio_sotto{
+    padding-bottom: 22px;
+}
+.spazio_sopra{
+    padding-top: 15px;
+}
 #titlebar span {
     float: right;
     font-weight: bold;
@@ -73,14 +96,14 @@ input[type=text] {
     border-bottom: 1px solid #c0c0c0;
     box-shadow: -1px -1px #808080, 0px -1px #808080, -1px 0px #808080, 1px 1px white, -1px 1px white, 1px -1px white;
     font-size: 11px;
-    width: 216px;
+   
     font-family: Helvetica;
-    line-height: 14px;
+    line-height: 15px;
     
 }
 
 #content span {
-    width: 72px;
+ 
     display: inline-block;
 }
 
@@ -99,7 +122,7 @@ input[type=text] {
 #buttonerators {
     float: left;
     width: 80px;
-    padding-top: 36px;
+    padding-top: 26px;
 }
 
 input[type=button] {
@@ -116,8 +139,8 @@ input[type=button] {
 background: #c0c0c0;
 }
 input[type=submit] {
-width: 30px;
-    height: 16px;
+width: 70px;
+    height: 20px;
     border-bottom: 1px solid #808080;
     border-right: 1px solid #808080;
     border-left: 1px solid #c0c0c0;
