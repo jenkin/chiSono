@@ -13,6 +13,11 @@ body {
     -moz-osx-font-smoothing: auto,  inherit,  unset,  grayscale;
     font-smoothing: auto,  inherit,  unset, grayscale;
 }
+
+.scroll{
+    overflow: hidden;
+    height:100px;
+}
 #img2 {
     align-self: center;
 }
