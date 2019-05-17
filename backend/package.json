@@ -1,20 +1,15 @@
 {
-  "name": "chisono-master",
+  "name": "esamecimarelli",
   "version": "1.0.0",
-  "description": "Gioco molto bello per esame dell'università",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andrea-css/chiSono.git"
-  },
-  "keywords": [],
-  "author": "DreamTeam\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[CCSSDreamTeam",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/andrea-css/chiSono/issues"
-  },
-  "homepage": "https://github.com/andrea-css/chiSono#readme"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^2.2.0"
+  }
 }
