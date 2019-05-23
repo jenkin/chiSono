@@ -3,12 +3,10 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var path = require('path');
 
-/*
-app.get('/', function (req, res) {
-    console.log(path.join(__dirname,'../frontend/index.html'));
-    res.sendFile(path.join(__dirname,'../frontend/index.html'));
-});
-*/
+/*app.get('/', function (req, res) {
+    console.log(path.join(__dirname,'/index.html'));
+    res.sendFile(path.join(__dirname,'/index.html'));
+});*/
 
 let vip = [
     {
