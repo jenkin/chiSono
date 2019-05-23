@@ -1,18 +1,15 @@
 import _ from 'lodash';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:3000');
-
-
-
 $(function () {
 
-    var socket = io(),
-        nickName = "",
+    const socket = io('http://localhost:3000/');
+    var nickName = "",
         id = "",
         btnState = false
 
-    $('.nicknameForm').submit(function (e) {
+    $('#nicknameButton').click(function (e) {
+        console.log("submit", $('#nicknameInput').val())
         e.preventDefault(); // prevents page reloading
         nickName = $('#nicknameInput').val()
         socket.emit('login', { nickName: nickName });
@@ -21,13 +18,13 @@ $(function () {
     });
 
     $('#buttonerators').click(function (e) {
-        if(!btnState){ // if btnState is false
+        if (!btnState) { // if btnState is false
             btnState = true
         } else {
             btnState = false
         }
         e.preventDefault(); // prevents page reloading
-        socket.emit('ready', {readyState: btnState});
+        socket.emit('ready', { readyState: btnState });
         return false;
     });
 
@@ -41,8 +38,11 @@ $(function () {
     socket.on('login', function (data) {
         console.log(data)
         id = data.id
-        $('#messages').append($('<li>').text(data.nickName + " has joined!"));
-        if (data.character) {
+        let source = document.getElementById("cardPlayer").innerHTML;
+        let template = Handlebars.compile(source)
+        $('.messages').append($(template(data)));
+        if (data.character) { // if character 
+
             $('#messages').append($('<li>').text(data.nickName + " is " + data.character.name));
         }
     });
@@ -50,7 +50,7 @@ $(function () {
     socket.on('ready', function (data) {
         console.log(data)
     });
-    
+
     socket.on('chat message', function (msg) {
         console.log(msg.nickName)
         if (msg.character) {

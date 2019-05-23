@@ -1,7 +1,7 @@
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-var path = require('path');
+//var path = require('path');
 
 /*
 app.get('/', function (req, res) {
@@ -44,6 +44,7 @@ io.on('connection', function (socket) {
     });
 
     socket.on('login', function (input) { // on login
+        console.log("login", input)
         player.nickName = input.nickName;
         player.character = vip[Math.floor(Math.random() * (+vip.length - +0)) + +0]
         player.id = socket.id;
