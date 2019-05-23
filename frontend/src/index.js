@@ -42,9 +42,10 @@ $(function () {
         let template = Handlebars.compile(source)
         $('.messages').append($(template(data)));
         if (data.character) { // if character 
-
+            
             $('#messages').append($('<li>').text(data.nickName + " is " + data.character.name));
         }
+        
     });
 
     socket.on('ready', function (data) {

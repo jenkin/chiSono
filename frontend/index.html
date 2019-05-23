@@ -73,13 +73,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
     <script id="cardPlayer" type="text/x-handlebars-template">
-      <div class="col centro spazio_sopra messages2">
-
+      <div class="col centro spazio_sopra ">
+        <h5>{{ nickName }}</h5>
         <div class="" style="display: block; position: relative;">
-          <img id="img2" src="..." alt="..." class="img-thumbnail ">
+          {{#if character.photo }}
+          <img id="img2" src="{{ character.photo }}" alt="..." class="img-thumbnail ">
+          {{else}}
+          <img id="img2" src="http://les-effets-du-son.e-monsite.com/medias/images/point-dinterrogation.png" alt="..." class="img-thumbnail ">
+          {{/if}}
         </div>
         <div class="spazio_sopra">
-          <h5>{{ nickName }}</h5>
+          <h5>{{ character.name }}</h5>
         </div>
         <div class="spazio_sopra">
           <form action="" class="messageForm">
