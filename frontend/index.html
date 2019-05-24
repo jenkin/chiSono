@@ -34,7 +34,7 @@
                 <div class="pixels"></div>
               </div>
               <div class="col spazio_sopra">
-                <span><u>Y</u>oure Nikname:</span>
+                <span>Your Nikname:</span>
                 <input id="nicknameInput" type="text" value="">
               </div>
               <div class="col">
@@ -52,27 +52,45 @@
 
   </div>
   </div>
-  <div class="container playerCon">
-    <div id="titlebar">
-      CAMPO GIOCATORI
-    </div>
+  <div class="container playerCon margin-top">
+
     <div class="container">
-
-      <div class="row playerCol messages ">
-
-       
+      <div class="titlebar-USERS">
+        CAMPO GIOCATORI
       </div>
     </div>
 
+    <div class="row playerCol messages ">
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"></script>
-    <script id="cardPlayer" type="text/x-handlebars-template">
+
+    </div>
+    <div class="titlebar-CHAT margin-top ">
+      CHAT
+    </div>
+    <div class="row playerCol">
+      <div class="scroll spazio_sopra">
+        <ul id="messages"></ul>
+      </div>
+      <div class="spazio_sopra">
+        <form id="messageForm" action="">
+          <input id="messageInput" type="text" class="form_win " placeholder="Inserisci Domanda" autocomplete="off" />
+          <button class="btnMessage" type="submit" form="messageForm">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
+  <script id="cardPlayer" type="text/x-handlebars-template">
       <div class="col centro spazio_sopra ">
         <h5>{{ nickName }}</h5>
         <div class="" style="display: block; position: relative;">
@@ -83,28 +101,19 @@
           {{/if}}
         </div>
         <div class="spazio_sopra">
-          <h5>{{ character.name }}</h5>
+            {{#if character.photo }}
+            <h5>{{ character.name }}</h5>
+            {{else}}
+            <h5>????</h5>
+            {{/if}}
+          
         </div>
-        <div class="spazio_sopra">
-          <form action="" class="messageForm">
-            <input type="text" class="form_win " placeholder="Inserisci Domanda" aria-label="Recipient's username"
-              aria-describedby="basic-addon2">
-          </form>
-        </div>
+       
 
-        <div class="spazio_sopra">
-          <input type="submit" value="OK">
-        </div>
-        <div class="scroll spazio_sopra">
-          hfoweihoiwehfoihfeo
-          <br>
-            uhdushiusheifuh
-            <br>
-              aydguysg
-        </div>
+       
       </div>
     </script>
-    <script src="main.js"></script>
+  <script src="main.js"></script>
 
 
 </body>
