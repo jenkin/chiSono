@@ -41,6 +41,8 @@ io.on('connection', function (socket) {
     socket.on('disconnect', function () { // user disconnected 
         if (numUsers > 0) { numUsers-- } // user cannot go under 0
         console.log('user disconnected numUser: ' + numUsers);
+        playersDisconnect = Object.values(players).filter(function (data) { return data.nickName != player.nickName }) // remove player on disconnect
+        io.emit('disconnect', playersDisconnect)
     });
 
     socket.on('login', function (input) { // on login
