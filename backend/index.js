@@ -26,7 +26,7 @@ let vip = [
 let numUsers = 0, //num user connected
     players = {};
 
-io.on('connection', function (socket) {    
+io.on('connection', function (socket) {
 
     let player = {
         id: "",
@@ -34,7 +34,7 @@ io.on('connection', function (socket) {
         character: {},
     }
 
-    socket.emit('connection', Object.values(players).filter(function(data){return data.nickName != player.nickName})) //emit only for me players object to show players connected
+    socket.emit('connection', Object.values(players).filter(function (data) { return data.nickName != player.nickName })) //emit only for me players object to show players connected
 
     console.log('an user connected'); // user connected
 
@@ -69,11 +69,15 @@ io.on('connection', function (socket) {
 
         let myNickName = player.nickName;
 
-        let isASuggestion = Object
+        let isASuggestion = 0
+
+        isASuggestion = Object
             .values(players)
             .filter((player) => player.nickName.toUpperCase() !== myNickName.toUpperCase())
             .filter((player) => player.character.name.toUpperCase() === msg.message.toUpperCase())
             .length;
+
+        console.log(isASuggestion)
 
         let isWinner = player.character.name === msg.message;
 
