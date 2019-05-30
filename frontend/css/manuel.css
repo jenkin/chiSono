@@ -13,6 +13,10 @@ body {
     -moz-osx-font-smoothing: auto,  inherit,  unset,  grayscale;
     font-smoothing: auto,  inherit,  unset, grayscale;
 }
+#messageForm{
+    padding-left: 24px;
+    margin-bottom: 10px;
+}
 
 .scroll{
     overflow: hidden;
