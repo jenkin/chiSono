@@ -43,6 +43,17 @@ $(function () {
         $('.messages').append($(template(data)));
     });
 
+    $('#readyBtn').click(function (e) {
+        if(!btnState){ // if btnState is false
+            btnState = true
+        } else {
+            btnState = false
+        }
+        e.preventDefault(); // prevents page reloading
+        socket.emit('ready', {readyState: btnState});
+        return false;
+    });
+
     socket.on('ready', function (data) {
         console.log(data)
     });
@@ -55,9 +66,31 @@ $(function () {
             $('#messages').append($('<li>').text(msg.message + " (" + msg.nickName + ")"));
         }
     });
+    socket.on('connection', function (data) {
+        console.log(data)
+        id = data.id
+        let source = document.getElementById("cardPlayer").innerHTML;
+        let template = Handlebars.compile(source)
+        $('.messages').append($(template(data)));
+    });
 });
 
+/*$(document).ready( function init()
+{
+    // existing data is always null. 
+    var existingData = localStorage.getItem("existingData");
+    if( existingData !== null )
+    {
+        var existingDataListHtml = existingData.split(",");
+        existingDataListHtml = $.each(existingData, function(data) {
+                return "<li>" + data + "<\/li>";
+            });
 
+        $("#existingData").html("<ul>" + existingDataListHtml + "<\/ul>");
+    }
+} );
+
+*/
 
 
 
