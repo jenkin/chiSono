@@ -39,7 +39,15 @@ $(function () {
         $('#messageInput').val('');
         return false;
     });
+<<<<<<< HEAD
     
+=======
+
+    socket.on('connection', function (data) {
+        console.log(data)
+    });
+
+>>>>>>> 5e92b795fad535b18c6567561564f0d0e77cb6e4
     socket.on('login', function (data) {
         console.log(data)
         id = data.id
