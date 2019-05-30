@@ -14,7 +14,12 @@ $(function () {
         nickName = $('#nicknameInput').val()
         socket.emit('login', { nickName: nickName });
         $('#nicknameInput').val('');
+        $("#userLogin").hide();
+    
+       
         return false;
+       
+        
     });
 
     $('#buttonerators').click(function (e) {
@@ -34,14 +39,20 @@ $(function () {
         $('#messageInput').val('');
         return false;
     });
-
+    
     socket.on('login', function (data) {
         console.log(data)
         id = data.id
+        mioID = data.id
         let source = document.getElementById("cardPlayer").innerHTML;
         let template = Handlebars.compile(source)
         $('.messages').append($(template(data)));
+        
     });
+    
+   
+    $("#readyBtn").hide();
+    $("#messageForm").hide();
 
     $('#readyBtn').click(function (e) {
         if(!btnState){ // if btnState is false
@@ -51,19 +62,22 @@ $(function () {
         }
         e.preventDefault(); // prevents page reloading
         socket.emit('ready', {readyState: btnState});
+        $('#messages').append($('<li>').text( "Waiting for other players ..." ));
+        $("#readyBtn").hide();
         return false;
     });
 
     socket.on('ready', function (data) {
         console.log(data)
+        $("#messageForm").show();
     });
 
     socket.on('chat message', function (msg) {
         console.log(msg.nickName)
         if (msg.character) {
-            $('#messages').append($('<li>').text(msg.message + " (" + msg.nickName + " as " + msg.character.name + ")"));
+            $('#messages').append($('<li>').text( " (" + msg.nickName + " as " + msg.character.name + ")" + msg.message));
         } else {
-            $('#messages').append($('<li>').text(msg.message + " (" + msg.nickName + ")"));
+            $('#messages').append($('<li>').text( " (" + msg.nickName + ")" + msg.message ));
         }
     });
     socket.on('connection', function (data) {
