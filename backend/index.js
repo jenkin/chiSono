@@ -26,13 +26,15 @@ let vip = [
 let numUsers = 0, //num user connected
     players = {};
 
-io.on('connection', function (socket) {
+io.on('connection', function (socket) {    
 
     let player = {
         id: "",
         nickName: "",
         character: {},
     }
+
+    socket.emit('connection', Object.values(players).filter(function(data){return data.nickName != player.nickName})) //emit only for me players object to show players connected
 
     console.log('an user connected'); // user connected
 
@@ -42,7 +44,7 @@ io.on('connection', function (socket) {
     });
 
     socket.on('login', function (input) { // on login
-        console.log("login", input)
+        //console.log("login", input)
         player.nickName = input.nickName;
         player.character = vip[Math.floor(Math.random() * (+vip.length - +0)) + +0]
         player.id = socket.id;
