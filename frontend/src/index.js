@@ -62,6 +62,7 @@ $(function () {
     $("#readyBtn").hide();
     $("#messageForm").hide();
 
+<<<<<<< HEAD
     $('#readyBtn').click(function (e) {
         if(!btnState){ // if btnState is false
             btnState = true
@@ -75,6 +76,8 @@ $(function () {
         return false;
     });
 
+=======
+>>>>>>> b6f9060daebc889fa597a3456e29ae1c25fdfcc8
     socket.on('ready', function (data) {
         console.log(data)
         $("#messageForm").show();
@@ -88,31 +91,9 @@ $(function () {
             $('#messages').append($('<li>').text( " (" + msg.nickName + ")" + msg.message ));
         }
     });
-    socket.on('connection', function (data) {
-        console.log(data)
-        id = data.id
-        let source = document.getElementById("cardPlayer").innerHTML;
-        let template = Handlebars.compile(source)
-        $('.messages').append($(template(data)));
-    });
 });
 
-/*$(document).ready( function init()
-{
-    // existing data is always null. 
-    var existingData = localStorage.getItem("existingData");
-    if( existingData !== null )
-    {
-        var existingDataListHtml = existingData.split(",");
-        existingDataListHtml = $.each(existingData, function(data) {
-                return "<li>" + data + "<\/li>";
-            });
 
-        $("#existingData").html("<ul>" + existingDataListHtml + "<\/ul>");
-    }
-} );
-
-*/
 
 
 
