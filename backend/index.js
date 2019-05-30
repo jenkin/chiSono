@@ -31,7 +31,7 @@ io.on('connection', function (socket) {
     let player = {
         id: "",
         nickName: "",
-        character: {},
+        character: { name: "", photo: "" },
     }
 
     socket.emit('connection', Object.values(players).filter(function (data) { return data.nickName != player.nickName })) //emit only for me players object to show players connected
@@ -41,16 +41,21 @@ io.on('connection', function (socket) {
     socket.on('disconnect', function () { // user disconnected 
         if (numUsers > 0) { numUsers-- } // user cannot go under 0
         console.log('user disconnected numUser: ' + numUsers);
-        playersDisconnect = Object.values(players).filter(function (data) { return data.nickName != player.nickName }) // remove player on disconnect
-        io.emit('disconnect', playersDisconnect)
+        players = Object.values(players).filter(function (data) { return data.nickName != player.nickName }) // remove player on disconnect
+        io.emit('disconnect', players)
     });
 
     socket.on('login', function (input) { // on login
-        //console.log("login", input)
         player.nickName = input.nickName;
-        player.character = vip[Math.floor(Math.random() * (+vip.length - +0)) + +0]
-        player.id = socket.id;
         players[player.nickName] = player;
+        let vipFiltered
+        for (let i = 0; i <= Object.values(players).length; i++) {
+            vipFiltered = vip.filter((vip) => vip.name != Object.values(players)[i].character.name)
+            break
+        }
+        players[player.nickName].character = vipFiltered[Math.floor(Math.random() * (+vipFiltered.length - +0)) + +0]
+        console.log(players[player.nickName])
+        player.id = socket.id;
         socket.broadcast.emit('login', player) //emit to everyone except me
         socket.emit('login', { id: player.id, nickName: player.nickName }) //emit only for me
     });

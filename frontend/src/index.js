@@ -35,6 +35,10 @@ $(function () {
         return false;
     });
 
+    socket.on('connection', function (data) {
+        console.log(data)
+    });
+
     socket.on('login', function (data) {
         console.log(data)
         id = data.id
