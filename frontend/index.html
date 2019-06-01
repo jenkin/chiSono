@@ -18,7 +18,7 @@
   <div class="container spazio_sotto ">
     <div class="row ">
       <div class="col-sm-12 col-md-4">
-        <img src="src/title23.png" class="img-fluid" alt="" style="margin:25px;">
+        <img src="src/title23.png" class="img-fluid" alt="" style="margin:25px 0 25px 0;">
       </div>
       <div class="offset-md-4">
 
@@ -30,14 +30,14 @@
               User Login
             </div>
             <div class="row">
-              <div class="col spazio_sotto">
+              <div class="col-4 col-sm-4 spazio_sotto">
                 <div class="pixels"></div>
               </div>
-              <div class="col spazio_sopra">
-                <span>Your Nikname:</span>
-                <input id="nicknameInput" type="text" value="">
+              <div class="col-4 col-sm-4 InputCol">
+                <div class="titlebar">Your Nickname: </div>
+               <input id="nicknameInput" type="text" value="">              
               </div>
-              <div class="col">
+              <div class="col-4 col-sm-4">
                 <div id="buttonerators">
                   <button id="nicknameButton" type="submit" form="nicknameForm" value="OK">OK</button>
                 </div>
@@ -79,7 +79,9 @@
           <button class="btnMessage" type="submit" form="messageForm">Send</button>
           
         </form>
-        <button id="readyBtn">Ready</button>
+        <div class="RDYbutton">
+          <button id="readyBtn">Ready</button>
+        </div>
       </div>
       <p id=win></p>
     </div>
