@@ -87,9 +87,12 @@ $(function () {
             if (msg.character) {
                 win.innerHTML = msg.nickName + " Win !!";
             win.classList.add("win");
+            $("#messageForm").hide();
             }
             else{ win.innerHTML = "You Win !!";
-            win.classList.add("win");}
+            win.classList.add("win");
+            $("#messageForm").hide();
+        }
            
         }
     });

@@ -10,6 +10,9 @@
     color: #000;
     position: absolute;
     margin: 200px 0 0 0;
+    padding-bottom: 19px;
+    padding-left: 96px;
+    color: #000080;
 }
 
 hr {margin: 0}
