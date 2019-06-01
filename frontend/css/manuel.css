@@ -6,8 +6,9 @@
 #win {
     text-align: center;
     font-size: 4em;
-    margin: 0;
-    color: #009688;
+    padding-bottom: 19px;
+    padding-left: 96px;
+    color: #000080;
 }
 
 hr {margin: 0}
