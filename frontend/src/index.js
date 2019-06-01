@@ -111,13 +111,8 @@ $(function () {
 
     socket.on('disconnect', function (data) {
         console.log(data)
-       /* $("cardPlayer").hide();
-        data.map((x)=>{
-            id = x.id
-            let source = document.getElementById("cardPlayer").innerHTML;
-            let template = Handlebars.compile(source)
-            $('.messages').append($(template(x)));
-        });*/
+        $("#cardP").hide();
+       
 
     });
 });
