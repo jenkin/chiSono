@@ -24,6 +24,18 @@ let vip = [
     {
         name: "Chiara Ferragni",
         photo: "https://www.caffeinamagazine.it/wp-content/uploads/2019/01/chiara-ferragni-.jpg"
+    },
+    {
+        name: "Lewis Hamilton",
+        photo: "https://cdn-5.motorsport.com/images/mgl/63kygeJ6/s8/f1-mercedes-amg-f1-w09-launch-2018-lewis-hamilton-mercedes-amg-f1.jpg"
+    },
+    {
+        name: "Brad Pitt",
+        photo: "https://images.vanityfair.it/wp-content/uploads/2018/12/05175836/Brad_Pitt_P.jpg"
+    },
+    {
+        name: "Manuel Mazzatelli",
+        photo: "https://scontent-sea1-1.cdninstagram.com/vp/1ea3698dcb3042ba10bac8eea671b6d7/5D787330/t51.2885-19/s150x150/28429174_161935441193641_2857634040599543808_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com"
     }
 ]
 
