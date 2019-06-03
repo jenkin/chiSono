@@ -52,15 +52,13 @@ io.on('connection', function (socket) {
     socket.on('login', function (input) { // on login
         player.nickName = input.nickName;
         players[player.nickName] = player;
+        players[player.nickName].character = vip[Math.floor(Math.random() * (+vip.length - +0)) + +0]
         let vipFiltered
-        console.log(Object.values(players).length)
         for (let i = 0; i < Object.values(players).length; i++) { // each user is assigned a different character
             console.log(Object.values(players)[i].character.name)
             vipFiltered = vip.filter((vip) => vip.name != Object.values(players)[i].character.name)
-            console.log(vipFiltered)
         }
         players[player.nickName].character = vipFiltered[Math.floor(Math.random() * (+vipFiltered.length - +0)) + +0]
-        //console.log(vipFiltered)
         player.id = socket.id;
         socket.broadcast.emit('login', player) //emit to everyone except me
         socket.emit('login', { id: player.id, nickName: player.nickName }) //emit only for me
