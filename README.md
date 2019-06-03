@@ -1,17 +1,15 @@
 # chiSono / who i am? 
+Who Am I? is a guessing game where players use yes or no questions to guess the identity of a famous person in the chat. Questions are based upon the traits and characteristics of a person everyone will be able to identify. This game works only with 4 people size group, however the game start when all players are ready.
 
-# Project Team:
+## Project Team:
 -\FRONTEND/-
-Manuel Mazzatelli
-Enrico Petrocco
+Manuel Mazzatelli,
+Enrico Petrocco,
 Andrea Cassini
+
 -\BACKEND/-
-Umberto Truscello
+Umberto Truscello,
 Francesco Scardigno
-
-## Description
-Who Am I? is a guessing game where players use yes or no questions to guess the identity of a famous person in the chat. Questions are based upon the traits and characteristics of a person everyone will be able to identify. This game works only with 4 people size group, however the game start when all players are ready. 
-
 
 ## Installation
 -\FRONTEND/-
