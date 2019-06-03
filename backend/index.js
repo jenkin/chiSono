@@ -20,7 +20,12 @@ let vip = [
     {
         name: "Kylie Jenner",
         photo: "https://specials-images.forbesimg.com/imageserve/5b3bc12d4bbe6f604389def2/416x416.jpg?background=000000&cropX1=71&cropX2=3541&cropY1=1071&cropY2=4540"
+    },
+    {
+        name: "Chiara Ferragni",
+        photo: "https://www.caffeinamagazine.it/wp-content/uploads/2019/01/chiara-ferragni-.jpg"
     }
+]
 ]
 
 let numUsers = 0, //num user connected

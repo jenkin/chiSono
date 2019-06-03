@@ -77,7 +77,7 @@ $(function () {
     socket.on('chat message', function (msg) {
         console.log(msg.nickName)
         if (msg.character) {
-            $('#messages').append($('<li>').text(" (" + msg.nickName + " as " + msg.character.name + ")" + msg.message));
+            $('#messages').append($('<li>').text(" (" + msg.nickName + ")" + msg.message));
         } else {
             $('#messages').append($('<li>').text(" (" + msg.nickName + ")" + msg.message));
         }
