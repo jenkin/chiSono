@@ -13,20 +13,28 @@ Francesco Scardigno
 
 ## Installation
 -\FRONTEND/-
+
 cd frontend |enter frontend folder
+
 npm install |installing all dependencies for frontend 
 
 -\BACKEND/-
+
 cd backend |enter backend folder
+
 npm install |installing all dependence for frontend 
 
 ##  Usage
 -\FRONTEND/-
+
 cd frontend |enter frontend folder
+
 npm run dev |start the frontend application
 
 -\BACKEND/-
+
 cd backend |enter backend folder
+
 node index.js |start the backend application
 
 ## Contributing
