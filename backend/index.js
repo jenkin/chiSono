@@ -26,7 +26,6 @@ let vip = [
         photo: "https://www.caffeinamagazine.it/wp-content/uploads/2019/01/chiara-ferragni-.jpg"
     }
 ]
-]
 
 let numUsers = 0, //num user connected
     players = {};
@@ -54,12 +53,14 @@ io.on('connection', function (socket) {
         player.nickName = input.nickName;
         players[player.nickName] = player;
         let vipFiltered
-        for (let i = 0; i <= Object.values(players).length; i++) {
+        console.log(Object.values(players).length)
+        for (let i = 0; i < Object.values(players).length; i++) { // each user is assigned a different character
+            console.log(Object.values(players)[i].character.name)
             vipFiltered = vip.filter((vip) => vip.name != Object.values(players)[i].character.name)
-            break
+            console.log(vipFiltered)
         }
         players[player.nickName].character = vipFiltered[Math.floor(Math.random() * (+vipFiltered.length - +0)) + +0]
-        console.log(players[player.nickName])
+        //console.log(vipFiltered)
         player.id = socket.id;
         socket.broadcast.emit('login', player) //emit to everyone except me
         socket.emit('login', { id: player.id, nickName: player.nickName }) //emit only for me
