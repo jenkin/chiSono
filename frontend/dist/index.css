@@ -1,0 +1,32 @@
+@import 'css/manuel.css';
+@import 'css/andrea.css';
+
+body{
+    background-color:#55aaaa;
+}
+
+
+.playerCon{
+    background: #C0C0C0;
+    box-shadow:1px 1px black;
+    border: 1px outset white;
+    border-bottom: 1px solid #808080;
+    border-right: 1px solid #808080;
+    border-left: 1px solid #c0c0c0;
+    border-top: 1px solid #c0c0c0;
+    box-shadow: -1px -1px white, 0px -1px white, -1px 0px white, 1px 1px black, -1px 1px black, 1px -1px black;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.icon {
+    width: 91px;
+}
+
+.form_win {
+    border: 1px solid #808080;
+}
+.bottoneDomanda {
+    float: left;
+    width: 80px;
+}
